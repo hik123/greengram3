@@ -2,6 +2,8 @@ package com.green.greengram3.user;
 
 import com.green.greengram3.common.ResVo;
 import com.green.greengram3.feed.FeedService;
+import com.green.greengram3.user.model.UserSigninDto;
+import com.green.greengram3.user.model.UserSigninVo;
 import com.green.greengram3.user.model.UserSignupDto;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -29,8 +31,14 @@ public class UserController {
             , @Parameter(name = "pic", description = "프로필 사진")
     })*/
     public ResVo postSignup(@RequestBody UserSignupDto dto) {
-        log.info("dto: {}", dto);
+        log.info("dto: {}", dto); //데이터 잘 넘어오는지 항상 체크하기
         return service.signup(dto);
+    }
+
+    @PostMapping("/signin")
+    public UserSigninVo postsignin(@RequestBody UserSigninDto dto) {
+        log.info("dto : {}", dto);
+        return service.signin(dto); //result - 1:성공, 2:아이디 없음, 3:비번틀림
     }
 }
 
