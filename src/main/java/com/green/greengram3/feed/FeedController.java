@@ -3,10 +3,7 @@ package com.green.greengram3.feed;
 
 import com.green.greengram3.common.Const;
 import com.green.greengram3.common.ResVo;
-import com.green.greengram3.feed.model.FeedFavDto;
-import com.green.greengram3.feed.model.FeedInsDto;
-import com.green.greengram3.feed.model.FeedSelDto;
-import com.green.greengram3.feed.model.FeedSelVo;
+import com.green.greengram3.feed.model.*;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
@@ -29,6 +26,7 @@ public class FeedController {
         return service.postFeed(dto);
     }
 
+    @Operation(summary = "피드 리스트", description = "전체 피드 리스트")
     @GetMapping
     public List<FeedSelVo> getFeedAll(FeedSelDto dto) {
         /*FeedSelDto dto = FeedSelDto.builder()    // builder패턴 쓰면 객체화 불가능
@@ -43,5 +41,12 @@ public class FeedController {
     @GetMapping("/fav")
     public ResVo toggleFeedFav(FeedFavDto dto) {
         return service.toggleFeedFav(dto);
+    }
+
+    //ifeed, iuser
+    @DeleteMapping
+    public ResVo DelFeed(FeedDelDto dto) {
+        log.info("dto : {}", dto);
+        return service.DelFeed(dto);
     }
 }

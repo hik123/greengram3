@@ -1,5 +1,6 @@
 package com.green.greengram3.feed;
 
+import com.green.greengram3.feed.model.FeedDelDto;
 import com.green.greengram3.feed.model.FeedInsProcDto;
 import com.green.greengram3.feed.model.FeedSelDto;
 import com.green.greengram3.feed.model.FeedSelVo;
@@ -11,4 +12,8 @@ import java.util.List;
 public interface FeedMapper {
     int insFeed(FeedInsProcDto dto);
     List<FeedSelVo> selFeedAll(FeedSelDto dto);
+
+    int selFeedConfirm(FeedDelDto dto);
+
+    int delFeed(FeedDelDto dto);
 }

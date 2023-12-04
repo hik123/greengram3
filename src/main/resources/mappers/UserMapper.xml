@@ -21,4 +21,15 @@
         </where>
     </select>
 
+    <delete id="delFollow">
+        DELETE FROM t_user_follow
+        WHERE from_iuser = #{fromIuser}
+        AND to_iuser = #{toIuser}
+    </delete>
+
+    <insert id="insFollow">
+        INSERT INTO t_user_follow
+        SET from_iuser = #{fromIuser}
+        , to_iuser = #{toIuser}
+    </insert>
 </mapper>

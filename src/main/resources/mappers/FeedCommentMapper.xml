@@ -19,4 +19,9 @@
         ORDER BY A.ifeed
         LIMIT #{startIdx}, #{rowCount};
     </select>
+
+    <delete id="delFeedComment">
+        DELETE FROM t_feed_comment
+        WHERE ifeed = #{ifeed}
+    </delete>
 </mapper>

@@ -48,4 +48,13 @@ public class UserService {
         vo.setResult(3);
         return vo;
     }
+
+    public ResVo toggleFollow(UserFollowDto dto) {
+        int delAffectedRow = mapper.delFollow(dto);
+        if(delAffectedRow == 1) {
+            return new ResVo(0);
+        }
+        int insAffectedRow = mapper.insFollow(dto);
+        return new ResVo(1);
+    }
 }

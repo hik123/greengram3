@@ -5,10 +5,12 @@ import com.green.greengram3.common.Const;
 import com.green.greengram3.common.ResVo;
 import com.green.greengram3.feed.model.*;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class FeedService {
@@ -69,8 +71,18 @@ public class FeedService {
         }
         int insAffectedRow = favMapper.insFeedFav(dto);
         return new ResVo(Const.FEED_FAV_ADD);
-    };
+    }
 
-
-
+    public ResVo DelFeed(FeedDelDto dto) {
+        int result = mapper.selFeedConfirm(dto);
+        log.info("result : {}", result);
+        if(result == dto.getIuser()) {
+            picsMapper.delFeedPics(dto);
+            favMapper.delFeedByFav(dto);
+            commentMapper.delFeedComment(dto);
+            mapper.delFeed(dto);
+            return new ResVo(1);
+        }
+        return new ResVo(0);
+    }
 }
