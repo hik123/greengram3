@@ -1,12 +1,15 @@
 package com.green.greengram3.user;
 
 
+import com.green.greengram3.common.Const;
 import com.green.greengram3.common.ResVo;
 import com.green.greengram3.user.model.*;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Slf4j
 @Service
@@ -55,6 +58,10 @@ public class UserService {
             return new ResVo(0);
         }
         int insAffectedRow = mapper.insFollow(dto);
-        return new ResVo(1);
+        return new ResVo(Const.SUCCESS);
+    }
+
+    public UserInfoVo getUserInfo(UserInfoSelDto dto) {
+        return mapper.selUserInfo(dto);
     }
 }

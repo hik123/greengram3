@@ -1,7 +1,10 @@
 package com.green.greengram3.common;
 
 public class Const {
-    public static final int FEED_COUNT_PER_PAGE = 20; //page당 피드 수
+    public static final int FEED_COUNT_PER_PAGE = 30; //page당 피드 수
+    public static final int DM_COUNT_PER_PAGE = 30;
+    public static final int DM_MSG_COUNT_PER_PAGE = 30;
+
 
     public static final int FEED_FAV_DEL = 0;
     public static final int FEED_FAV_ADD = 1;

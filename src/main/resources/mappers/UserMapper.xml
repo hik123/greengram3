@@ -32,4 +32,33 @@
         SET from_iuser = #{fromIuser}
         , to_iuser = #{toIuser}
     </insert>
+
+    <select id="selUserInfo">
+        SELECT A. iuser, A.nm, A.created_at AS createdAt, A.pic
+        , COUNT(DISTINCT B.ifeed) AS feedCnt
+        , COUNT(C.ifeed) AS favCnt
+        , D.following, D.follower, D.followState
+        FROM t_user A
+        LEFT JOIN t_feed B
+        ON A.iuser = B.iuser
+        LEFT JOIN t_feed_fav C
+        ON B.ifeed = C.ifeed
+        INNER JOIN (
+            SELECT
+                SUM(if(from_iuser = #{targetIuser}, 1, 0)) AS following
+                , SUM(if(to_iuser = #{targetIuser}, 1, 0)) AS follower
+                , (
+                      SUM(if(from_iuser = #{loginedIuser} AND to_iuser = #{targetIuser}, 1, 0))
+                    + SUM(if(from_iuser = #{targetIuser} AND to_iuser = #{loginedIuser}, 2, 0))
+                ) AS followState
+            FROM t_user_follow
+        ) AS D
+        WHERE A.iuser = #{targetIuser};
+        <!-- followState
+        0 - 둘 다 팔로우 안함
+        1 - loginedIuser가 targetIuser를 팔로우 한 상황
+        2 - targetIuser가 loginedIuser를 팔로우만 한 상황
+        3 - 둘 다 팔로우 한 상황
+        -->
+    </select>
 </mapper>

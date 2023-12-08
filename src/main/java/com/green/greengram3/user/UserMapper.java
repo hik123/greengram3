@@ -1,11 +1,10 @@
 package com.green.greengram3.user;
 
 
-import com.green.greengram3.user.model.UserFollowDto;
-import com.green.greengram3.user.model.UserSigninDto;
-import com.green.greengram3.user.model.UserSigninProcVo;
-import com.green.greengram3.user.model.UserSignupProcDto;
+import com.green.greengram3.user.model.*;
 import org.apache.ibatis.annotations.Mapper;
+
+import java.util.List;
 
 @Mapper
 public interface UserMapper {
@@ -14,4 +13,7 @@ public interface UserMapper {
 
     int delFollow(UserFollowDto dto);
     int insFollow(UserFollowDto dto);
+
+    UserInfoVo selUserInfo(UserInfoSelDto dto);
+    //쿼리문 결과값이 컬럼 1개만 나오기때문에 List안써도됨
 }
