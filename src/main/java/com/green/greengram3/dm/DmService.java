@@ -29,4 +29,9 @@ public class DmService {
     public List<DmSelVo> getDmAll(DmSelDto dto) {
         return mapper.selDmAll(dto);
     }
+
+    public ResVo delDmMsg(DmMsgDelDto dto) {
+        int result = mapper.delDmMsg(dto);
+        return new ResVo(result);
+    }
 }

@@ -36,5 +36,9 @@ public class DmController {
         return service.getMsgAll(dto);
     }
 
-
+    @DeleteMapping("/msg")
+    public ResVo delDmMsg(@RequestBody DmMsgDelDto dto) {
+        log.info("dto : {}", dto);
+        return service.delDmMsg(dto);
+    }
 }

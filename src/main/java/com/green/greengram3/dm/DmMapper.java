@@ -21,5 +21,6 @@ public interface DmMapper {
 
     List<DmMsgSelVo> selDmMsgAll(DmMsgSelDto dto);
 
+    int delDmMsg(DmMsgDelDto dto);
 
 }
