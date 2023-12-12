@@ -7,20 +7,18 @@ import java.util.List;
 
 @Mapper
 public interface DmMapper {
-    //---------------------t_dm
-    int insDm(DmUserInsDto dto);
-
+    //----------------------- t_dm
+    int insDm(DmInsDto dto);
     List<DmSelVo> selDmAll(DmSelDto dto);
+    int updDmLastMsg(DmMsgInsDto dto);
+    int updDmLastMsgAfterDelByLastMsg(DmMsgDelDto dto);
 
-    //---------------------t_dm_user
-    int insDmUser(DmUserInsDto dto);
+    //----------------------- t_dm_user
+    int insDmUser(DmInsDto dto);
+    Integer selDmUserCheck(DmInsDto dto);
 
-    //---------------------t_dm_msg
-
+    //----------------------- t_dm_msg
     int insDmMsg(DmMsgInsDto dto);
-
     List<DmMsgSelVo> selDmMsgAll(DmMsgSelDto dto);
-
     int delDmMsg(DmMsgDelDto dto);
-
 }

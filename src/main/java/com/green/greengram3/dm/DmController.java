@@ -14,14 +14,20 @@ import java.util.List;
 @RequiredArgsConstructor
 @RequestMapping("/api/dm")
 public class DmController {
-    private final DmService service;
 
+    private final DmService service;
 
     @GetMapping
     public List<DmSelVo> getDmAll(DmSelDto dto) {
         return service.getDmAll(dto);
     }
 
+    //idm, iuser (2)
+    //iuser 2개 (2)
+    @PostMapping
+    public DmSelVo postDm(@RequestBody DmInsDto dto) {
+        return service.postDm(dto);
+    }
 
     //----------------------------- t_dm_msg
     @PostMapping("/msg")
@@ -31,14 +37,13 @@ public class DmController {
 
     @GetMapping("/msg")
     public List<DmMsgSelVo> getDmMsgAll(DmMsgSelDto dto) {
-        log.info("dto : {}", dto);
-        List<DmMsgSelVo> list = new ArrayList();
+        log.info("dto: {}", dto);
         return service.getMsgAll(dto);
     }
 
     @DeleteMapping("/msg")
-    public ResVo delDmMsg(@RequestBody DmMsgDelDto dto) {
-        log.info("dto : {}", dto);
+    public ResVo delDmMsg(DmMsgDelDto dto) {
+        log.info("dto: {}", dto);
         return service.delDmMsg(dto);
     }
 }

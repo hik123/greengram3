@@ -1,16 +1,15 @@
 package com.green.greengram3.user;
 
 import com.green.greengram3.common.ResVo;
-import com.green.greengram3.feed.FeedService;
 import com.green.greengram3.user.model.*;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.Parameters;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @Slf4j
 @RestController
@@ -21,33 +20,29 @@ public class UserController {
 
     @PostMapping("/signup")
     @Operation(summary = "회원가입", description = "회원가입 처리")
-    /*@Parameters(value = {  //get방식일때만 쓰는게
-            @Parameter(name = "uid", description = "아이디")
-            , @Parameter(name = "upw", description = "비밀번호")
-            , @Parameter(name = "nm", description = "이름")
-            , @Parameter(name = "pic", description = "프로필 사진")
-    })*/
     public ResVo postSignup(@RequestBody UserSignupDto dto) {
-        log.info("dto: {}", dto); //데이터 잘 넘어오는지 항상 체크하기
+        log.info("dto: {}", dto);
         return service.signup(dto);
     }
 
     @PostMapping("/signin")
-    public UserSigninVo postsignin(@RequestBody UserSigninDto dto) {
-        log.info("dto : {}", dto);
-        return service.signin(dto); //result - 1:성공, 2:아이디 없음, 3:비번틀림
-    }
-
-    // -- follow --
-    // ResVo -result: 1 - following, 취소는 0    //없으면 인서트 있으면 삭제
-    @PostMapping("/follow")
-    public ResVo toggleFollow (@RequestBody UserFollowDto dto) {
-        return service.toggleFollow(dto);
+    @Operation(summary = "인증", description = "아이디/비번을 활용한 인증처리")
+    public UserSigninVo postSignin(@RequestBody UserSigninDto dto) {
+        log.info("dto: {}", dto);
+        return service.signin(dto);  //result - 1: 성공, 2: 아이디 없음, 3: 비밀번호 틀림
     }
 
     @GetMapping
+    @Operation(summary = "유저 정보", description = "프로필 화면에서 사용할 프로필 유저 정보")
     public UserInfoVo getUserInfo(UserInfoSelDto dto) {
+        log.info("dto: {}", dto);
         return service.getUserInfo(dto);
     }
-}
 
+    //--------------- follow
+    //ResVo - result: 1-following, 0-취소
+    @PostMapping("/follow")
+    public ResVo toggleFollow(@RequestBody UserFollowDto dto) {
+        return service.toggleFollow(dto);
+    }
+}

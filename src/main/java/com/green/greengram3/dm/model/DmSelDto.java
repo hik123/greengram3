@@ -1,6 +1,5 @@
 package com.green.greengram3.dm.model;
 
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.green.greengram3.common.Const;
 import lombok.Data;
@@ -19,6 +18,4 @@ public class DmSelDto {
     public void setPage(int page) {
         this.startIdx = (page - 1) * this.rowCount;
     }
-
-
 }

@@ -1,12 +1,8 @@
 package com.green.greengram3.user.model;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
-@Getter
-@Setter
-@Builder
+@Data
 public class UserSignupProcDto {
     private int iuser;
     private String uid;

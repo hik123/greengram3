@@ -11,11 +11,8 @@ public class DmMsgSelDto {
     @JsonIgnore
     private int startIdx;
     @JsonIgnore
-    private int rowCount = Const.FEED_COUNT_PER_PAGE;
-
+    private int rowCount = Const.DM_MSG_COUNT_PER_PAGE;
     public void setPage(int page) {
-        this.startIdx = (page - 1) * rowCount;
+        this.startIdx = (page - 1) * this.rowCount;
     }
-
-
 }
