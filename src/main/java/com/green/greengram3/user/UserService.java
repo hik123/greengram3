@@ -56,6 +56,15 @@ public class UserService {
         return mapper.selUserInfo(dto);
     }
 
+    public ResVo patchUserFirebaseToken(UserFirebaseTokenPatchDto dto) {
+        int affectedRows = mapper.updUserFirebaseToken(dto);
+        return new ResVo(affectedRows);
+    }
+
+    public ResVo patchUserPic(UserPicPatchDto dto) {
+        int affectedRows = mapper.updUserPic(dto);
+        return new ResVo(affectedRows);
+    }
     public ResVo toggleFollow(UserFollowDto dto) {
         int delAffectedRows = mapper.delUserFollow(dto);
         if(delAffectedRows == 1) {

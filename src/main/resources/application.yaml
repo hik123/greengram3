@@ -15,3 +15,6 @@ springdoc:
 server:
   port: 8082
 
+fcm:
+  certification: serviceAccountKey.json
+

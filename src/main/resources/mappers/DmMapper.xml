@@ -24,6 +24,17 @@
         LIMIT #{startIdx}, #{rowCount}
     </select>
 
+    <!-- -->
+    <select id="selOtherPersonByLoginUser">
+        SELECT B.iuser, B.pic, B.firebase_token AS firebaseToken
+        FROM t_dm_user A
+        INNER JOIN t_user B
+        ON A.iuser = B.iuser
+        WHERE A.idm = #{idm}
+        AND A.iuser != #{loginedIuser}
+    </select>
+
+
     <update id="updDmLastMsg">
         UPDATE t_dm
         SET last_msg = #{msg}
