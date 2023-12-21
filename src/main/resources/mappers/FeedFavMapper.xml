@@ -7,6 +7,15 @@
         , iuser = #{iuser}
     </insert>
 
+    <select id="selFeedFavForTest">
+        SELECT ifeed, iuser
+        FROM t_feed_fav
+        WHERE ifeed = #{ifeed}
+        <if test="iuser > 0">
+            AND iuser = #{iuser}
+        </if>
+    </select>
+
     <delete id="delFeedFav">
         DELETE FROM t_feed_fav
         WHERE ifeed = #{ifeed}

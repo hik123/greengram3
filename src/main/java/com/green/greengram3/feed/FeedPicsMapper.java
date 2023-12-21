@@ -1,14 +1,14 @@
 package com.green.greengram3.feed;
 
 import com.green.greengram3.feed.model.FeedDelDto;
-import com.green.greengram3.feed.model.FeedInsProcDto;
+import com.green.greengram3.feed.model.FeedInsDto;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
 @Mapper
 public interface FeedPicsMapper {
-    int insFeedPics(FeedInsProcDto pDto);
+    int insFeedPics(FeedInsDto dto);
 
     List<String> selFeedPicsAll(int ifeed);  //컬럼이 2개이상 부터는 list말고 객체사용
 

@@ -20,22 +20,12 @@ public class FeedService {
     private final FeedCommentMapper commentMapper;
 
     public ResVo postFeed(FeedInsDto dto) {
-        FeedInsProcDto pDto = FeedInsProcDto.builder()
-                .iuser(dto.getIuser())
-                .contents(dto.getContents())
-                .location(dto.getLocation())
-                .pics(dto.getPics())
-                .build();
+        int feedAffectedRow = mapper.insFeed(dto);
+        log.info("feedAffectedRows: {} ", feedAffectedRow);
 
-        int feedAffectedRow = mapper.insFeed(pDto);
-        if(feedAffectedRow == 0 || pDto.getIfeed() < 1) {
-            return new ResVo(0);  //피드 생성실패 result:0
-        }
-        int picsAffectedRow = picsMapper.insFeedPics(pDto);
-        if(picsAffectedRow != pDto.getPics().size()) {
-            return new ResVo(3); //사진 추가실패 result:3
-        }
-        return new ResVo(pDto.getIfeed());
+        int feedPicsAffectedRow = picsMapper.insFeedPics(dto);
+        log.info("feedPicsAffectedRows: {} ", feedPicsAffectedRow);
+        return new ResVo(dto.getIfeed());
     }
 
     public List<FeedSelVo> getFeedAll(FeedSelDto dto) {                     // n+1문제 / for문에서 feed가 4개일때 for문 5번반복?
@@ -51,7 +41,6 @@ public class FeedService {
 
             fcDto.setIfeed(vo.getIfeed());              // FeedCommentSelDto에 ifeed값 담고
             List<FeedCommentSelVo> comments = commentMapper.selFeedCommentAll(fcDto);  //comment 전부 comments에 담고
-
             if(comments.size() == Const.FEED_COMMENT_FIRST_CNT) {      // 댓글4일때 3개까지보이게
                 vo.setIsMoreComment(1);             //IsMoreComment 0: 댓글이 더 없음, 1: 댓글이 더있음
                 comments.remove(comments.size() - 1);
