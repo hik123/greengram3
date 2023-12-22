@@ -48,6 +48,8 @@ public class FeedService {
             vo.setComments(comments);
         }
         return list;
+
+        //ex) select 했을때 20개의 레코드가 넘어왔을때 21번 select 하는것을 n+1문제, 코드상으론 깔끔한데 성능이 느림
     }
 
     // ----------- t_feed_fav

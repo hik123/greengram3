@@ -1,0 +1,92 @@
+[2023-12-21 12:38:37 INFO  main] [com.green.greengram3.feed.FeedServiceTest] Starting FeedServiceTest using Java 17.0.8.1 with PID 9408 (started by Administrator in D:\2023_second\java\spring\greengram3)
+[2023-12-21 12:38:37 INFO  main] [com.green.greengram3.feed.FeedServiceTest] No active profile set, falling back to 1 default profile: "default"
+[2023-12-21 12:38:38 INFO  main] [com.green.greengram3.feed.FeedServiceTest] Started FeedServiceTest in 2.015 seconds (process running for 2.877)
+[2023-12-21 12:38:38 INFO  main] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2023-12-21 12:38:38 INFO  main] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection org.mariadb.jdbc.Connection@6eed46e9
+[2023-12-21 12:38:38 INFO  main] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2023-12-21 12:38:38 INFO  main] [com.green.greengram3.feed.FeedService] feedAffectedRows: 1 
+[2023-12-21 12:38:38 INFO  main] [com.green.greengram3.feed.FeedService] feedPicsAffectedRows: 2 
+[2023-12-21 12:38:38 INFO  main] [com.green.greengram3.feed.FeedService] feedAffectedRows: 1 
+[2023-12-21 12:38:38 INFO  main] [com.green.greengram3.feed.FeedService] feedPicsAffectedRows: 2 
+[2023-12-21 12:38:38 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2023-12-21 12:38:38 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2023-12-21 12:38:46 INFO  main] [com.green.greengram3.feed.FeedServiceTest] Starting FeedServiceTest using Java 17.0.8.1 with PID 4092 (started by Administrator in D:\2023_second\java\spring\greengram3)
+[2023-12-21 12:38:46 INFO  main] [com.green.greengram3.feed.FeedServiceTest] No active profile set, falling back to 1 default profile: "default"
+[2023-12-21 12:38:48 INFO  main] [com.green.greengram3.feed.FeedServiceTest] Started FeedServiceTest in 1.68 seconds (process running for 2.532)
+[2023-12-21 12:38:48 INFO  main] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2023-12-21 12:38:48 INFO  main] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection org.mariadb.jdbc.Connection@36f6d25c
+[2023-12-21 12:38:48 INFO  main] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2023-12-21 12:38:48 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2023-12-21 12:38:48 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2023-12-21 12:40:03 INFO  main] [com.green.greengram3.feed.FeedServiceTest] Starting FeedServiceTest using Java 17.0.8.1 with PID 2692 (started by Administrator in D:\2023_second\java\spring\greengram3)
+[2023-12-21 12:40:03 INFO  main] [com.green.greengram3.feed.FeedServiceTest] No active profile set, falling back to 1 default profile: "default"
+[2023-12-21 12:40:04 INFO  main] [com.green.greengram3.feed.FeedServiceTest] Started FeedServiceTest in 1.685 seconds (process running for 2.53)
+[2023-12-21 12:40:04 INFO  main] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2023-12-21 12:40:04 INFO  main] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection org.mariadb.jdbc.Connection@75e0a54c
+[2023-12-21 12:40:04 INFO  main] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2023-12-21 12:40:04 INFO  main] [com.green.greengram3.feed.FeedServiceTest] result [FeedSelVo(ifeed=1, contents=일번 feedSelVo, location=null, createdAt=null, writerIuser=null, writerNm=null, writerPic=null, pics=[a.jpg, b.jpg], isFav=0, comments=[], isMoreComment=0), FeedSelVo(ifeed=2, contents=이번 feedSelVo, location=null, createdAt=null, writerIuser=null, writerNm=null, writerPic=null, pics=[가.jpg, 나.jpg], isFav=0, comments=[FeedCommentSelVo(ifeedComment=0, comment=ddd, createdAt=null, writerIuser=0, writerNm=null, writerPic=null), FeedCommentSelVo(ifeedComment=0, comment=fff, createdAt=null, writerIuser=0, writerNm=null, writerPic=null), FeedCommentSelVo(ifeedComment=0, comment=ggg, createdAt=null, writerIuser=0, writerNm=null, writerPic=null)], isMoreComment=0)]
+[2023-12-21 12:40:04 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2023-12-21 12:40:04 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2023-12-21 12:43:16 INFO  main] [com.green.greengram3.feed.FeedServiceTest] Starting FeedServiceTest using Java 17.0.8.1 with PID 3228 (started by Administrator in D:\2023_second\java\spring\greengram3)
+[2023-12-21 12:43:16 INFO  main] [com.green.greengram3.feed.FeedServiceTest] No active profile set, falling back to 1 default profile: "default"
+[2023-12-21 12:43:17 INFO  main] [com.green.greengram3.feed.FeedServiceTest] Started FeedServiceTest in 1.683 seconds (process running for 2.52)
+[2023-12-21 12:43:18 INFO  main] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2023-12-21 12:43:18 INFO  main] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection org.mariadb.jdbc.Connection@4ced17f3
+[2023-12-21 12:43:18 INFO  main] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2023-12-21 12:43:18 INFO  main] [com.green.greengram3.feed.FeedServiceTest] result [FeedSelVo(ifeed=1, contents=일번 feedSelVo, location=null, createdAt=null, writerIuser=null, writerNm=null, writerPic=null, pics=[a.jpg, b.jpg], isFav=0, comments=[], isMoreComment=0), FeedSelVo(ifeed=2, contents=이번 feedSelVo, location=null, createdAt=null, writerIuser=null, writerNm=null, writerPic=null, pics=[가.jpg, 나.jpg], isFav=0, comments=[FeedCommentSelVo(ifeedComment=0, comment=ddd, createdAt=null, writerIuser=0, writerNm=null, writerPic=null), FeedCommentSelVo(ifeedComment=0, comment=fff, createdAt=null, writerIuser=0, writerNm=null, writerPic=null), FeedCommentSelVo(ifeedComment=0, comment=ggg, createdAt=null, writerIuser=0, writerNm=null, writerPic=null), FeedCommentSelVo(ifeedComment=0, comment=ㅎㅎㅎ, createdAt=null, writerIuser=0, writerNm=null, writerPic=null), FeedCommentSelVo(ifeedComment=0, comment=ㅎㅎㅎ, createdAt=null, writerIuser=0, writerNm=null, writerPic=null)], isMoreComment=0)]
+[2023-12-21 12:43:18 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2023-12-21 12:43:18 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2023-12-21 12:45:02 INFO  main] [com.green.greengram3.feed.FeedServiceTest] Starting FeedServiceTest using Java 17.0.8.1 with PID 1728 (started by Administrator in D:\2023_second\java\spring\greengram3)
+[2023-12-21 12:45:02 INFO  main] [com.green.greengram3.feed.FeedServiceTest] No active profile set, falling back to 1 default profile: "default"
+[2023-12-21 12:45:03 INFO  main] [com.green.greengram3.feed.FeedServiceTest] Started FeedServiceTest in 1.709 seconds (process running for 2.567)
+[2023-12-21 12:45:03 INFO  main] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2023-12-21 12:45:03 INFO  main] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection org.mariadb.jdbc.Connection@7c4d1c7b
+[2023-12-21 12:45:03 INFO  main] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2023-12-21 12:45:03 INFO  main] [com.green.greengram3.feed.FeedServiceTest] result [FeedSelVo(ifeed=1, contents=일번 feedSelVo, location=null, createdAt=null, writerIuser=null, writerNm=null, writerPic=null, pics=[a.jpg, b.jpg], isFav=0, comments=[FeedCommentSelVo(ifeedComment=0, comment=ddd, createdAt=null, writerIuser=0, writerNm=null, writerPic=null), FeedCommentSelVo(ifeedComment=0, comment=fff, createdAt=null, writerIuser=0, writerNm=null, writerPic=null), FeedCommentSelVo(ifeedComment=0, comment=ggg, createdAt=null, writerIuser=0, writerNm=null, writerPic=null), FeedCommentSelVo(ifeedComment=0, comment=ㅎㅎㅎ, createdAt=null, writerIuser=0, writerNm=null, writerPic=null), FeedCommentSelVo(ifeedComment=0, comment=ㅎㅎㅎ, createdAt=null, writerIuser=0, writerNm=null, writerPic=null)], isMoreComment=0), FeedSelVo(ifeed=2, contents=이번 feedSelVo, location=null, createdAt=null, writerIuser=null, writerNm=null, writerPic=null, pics=[가.jpg, 나.jpg], isFav=0, comments=[], isMoreComment=0)]
+[2023-12-21 12:45:03 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2023-12-21 12:45:03 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2023-12-21 12:45:36 INFO  main] [com.green.greengram3.feed.FeedServiceTest] Starting FeedServiceTest using Java 17.0.8.1 with PID 7132 (started by Administrator in D:\2023_second\java\spring\greengram3)
+[2023-12-21 12:45:36 INFO  main] [com.green.greengram3.feed.FeedServiceTest] No active profile set, falling back to 1 default profile: "default"
+[2023-12-21 12:45:38 INFO  main] [com.green.greengram3.feed.FeedServiceTest] Started FeedServiceTest in 1.644 seconds (process running for 2.478)
+[2023-12-21 12:45:38 INFO  main] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2023-12-21 12:45:38 INFO  main] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection org.mariadb.jdbc.Connection@6ad6ae45
+[2023-12-21 12:45:38 INFO  main] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2023-12-21 12:45:38 INFO  main] [com.green.greengram3.feed.FeedServiceTest] result [FeedSelVo(ifeed=1, contents=일번 feedSelVo, location=null, createdAt=null, writerIuser=null, writerNm=null, writerPic=null, pics=[a.jpg, b.jpg], isFav=0, comments=[FeedCommentSelVo(ifeedComment=0, comment=ddd, createdAt=null, writerIuser=0, writerNm=null, writerPic=null), FeedCommentSelVo(ifeedComment=0, comment=fff, createdAt=null, writerIuser=0, writerNm=null, writerPic=null), FeedCommentSelVo(ifeedComment=0, comment=ggg, createdAt=null, writerIuser=0, writerNm=null, writerPic=null)], isMoreComment=1), FeedSelVo(ifeed=2, contents=이번 feedSelVo, location=null, createdAt=null, writerIuser=null, writerNm=null, writerPic=null, pics=[가.jpg, 나.jpg], isFav=0, comments=[], isMoreComment=0)]
+[2023-12-21 12:45:38 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2023-12-21 12:45:38 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2023-12-21 12:45:48 INFO  main] [com.green.greengram3.feed.FeedServiceTest] Starting FeedServiceTest using Java 17.0.8.1 with PID 4732 (started by Administrator in D:\2023_second\java\spring\greengram3)
+[2023-12-21 12:45:48 INFO  main] [com.green.greengram3.feed.FeedServiceTest] No active profile set, falling back to 1 default profile: "default"
+[2023-12-21 12:45:49 INFO  main] [com.green.greengram3.feed.FeedServiceTest] Started FeedServiceTest in 1.697 seconds (process running for 2.522)
+[2023-12-21 12:45:49 INFO  main] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2023-12-21 12:45:50 INFO  main] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection org.mariadb.jdbc.Connection@7c4d1c7b
+[2023-12-21 12:45:50 INFO  main] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2023-12-21 12:45:50 INFO  main] [com.green.greengram3.feed.FeedServiceTest] result [FeedSelVo(ifeed=1, contents=일번 feedSelVo, location=null, createdAt=null, writerIuser=null, writerNm=null, writerPic=null, pics=[a.jpg, b.jpg], isFav=0, comments=[FeedCommentSelVo(ifeedComment=0, comment=ddd, createdAt=null, writerIuser=0, writerNm=null, writerPic=null), FeedCommentSelVo(ifeedComment=0, comment=fff, createdAt=null, writerIuser=0, writerNm=null, writerPic=null), FeedCommentSelVo(ifeedComment=0, comment=ggg, createdAt=null, writerIuser=0, writerNm=null, writerPic=null)], isMoreComment=1), FeedSelVo(ifeed=2, contents=이번 feedSelVo, location=null, createdAt=null, writerIuser=null, writerNm=null, writerPic=null, pics=[가.jpg, 나.jpg], isFav=0, comments=[], isMoreComment=0)]
+[2023-12-21 12:45:50 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2023-12-21 12:45:50 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2023-12-21 12:46:03 INFO  main] [com.green.greengram3.feed.FeedServiceTest] Starting FeedServiceTest using Java 17.0.8.1 with PID 3796 (started by Administrator in D:\2023_second\java\spring\greengram3)
+[2023-12-21 12:46:03 INFO  main] [com.green.greengram3.feed.FeedServiceTest] No active profile set, falling back to 1 default profile: "default"
+[2023-12-21 12:46:04 INFO  main] [com.green.greengram3.feed.FeedServiceTest] Started FeedServiceTest in 1.695 seconds (process running for 2.504)
+[2023-12-21 12:46:05 INFO  main] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2023-12-21 12:46:05 INFO  main] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection org.mariadb.jdbc.Connection@6eed46e9
+[2023-12-21 12:46:05 INFO  main] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2023-12-21 12:46:05 INFO  main] [com.green.greengram3.feed.FeedServiceTest] result [FeedSelVo(ifeed=1, contents=일번 feedSelVo, location=null, createdAt=null, writerIuser=null, writerNm=null, writerPic=null, pics=[a.jpg, b.jpg], isFav=0, comments=[FeedCommentSelVo(ifeedComment=0, comment=ddd, createdAt=null, writerIuser=0, writerNm=null, writerPic=null), FeedCommentSelVo(ifeedComment=0, comment=fff, createdAt=null, writerIuser=0, writerNm=null, writerPic=null), FeedCommentSelVo(ifeedComment=0, comment=ggg, createdAt=null, writerIuser=0, writerNm=null, writerPic=null)], isMoreComment=1), FeedSelVo(ifeed=2, contents=이번 feedSelVo, location=null, createdAt=null, writerIuser=null, writerNm=null, writerPic=null, pics=[가.jpg, 나.jpg], isFav=0, comments=[], isMoreComment=0)]
+[2023-12-21 12:46:05 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2023-12-21 12:46:05 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2023-12-21 12:51:49 INFO  main] [com.green.greengram3.feed.FeedServiceTest] Starting FeedServiceTest using Java 17.0.8.1 with PID 3304 (started by Administrator in D:\2023_second\java\spring\greengram3)
+[2023-12-21 12:51:49 INFO  main] [com.green.greengram3.feed.FeedServiceTest] No active profile set, falling back to 1 default profile: "default"
+[2023-12-21 12:51:51 INFO  main] [com.green.greengram3.feed.FeedServiceTest] Started FeedServiceTest in 1.77 seconds (process running for 2.594)
+[2023-12-21 12:51:51 INFO  main] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2023-12-21 12:51:51 INFO  main] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection org.mariadb.jdbc.Connection@36f6d25c
+[2023-12-21 12:51:51 INFO  main] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2023-12-21 12:51:51 INFO  main] [com.green.greengram3.feed.FeedServiceTest] result [FeedSelVo(ifeed=1, contents=일번 feedSelVo, location=null, createdAt=null, writerIuser=null, writerNm=null, writerPic=null, pics=[a.jpg, b.jpg], isFav=0, comments=[FeedCommentSelVo(ifeedComment=0, comment=ddd, createdAt=null, writerIuser=0, writerNm=null, writerPic=null), FeedCommentSelVo(ifeedComment=0, comment=fff, createdAt=null, writerIuser=0, writerNm=null, writerPic=null), FeedCommentSelVo(ifeedComment=0, comment=ggg, createdAt=null, writerIuser=0, writerNm=null, writerPic=null)], isMoreComment=1), FeedSelVo(ifeed=2, contents=이번 feedSelVo, location=null, createdAt=null, writerIuser=null, writerNm=null, writerPic=null, pics=[가.jpg, 나.jpg], isFav=0, comments=[], isMoreComment=0)]
+[2023-12-21 12:51:51 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2023-12-21 12:51:51 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+[2023-12-21 13:02:46 INFO  main] [com.green.greengram3.feed.FeedServiceTest] Starting FeedServiceTest using Java 17.0.8.1 with PID 4512 (started by Administrator in D:\2023_second\java\spring\greengram3)
+[2023-12-21 13:02:46 INFO  main] [com.green.greengram3.feed.FeedServiceTest] No active profile set, falling back to 1 default profile: "default"
+[2023-12-21 13:02:47 INFO  main] [com.green.greengram3.feed.FeedServiceTest] Started FeedServiceTest in 1.705 seconds (process running for 2.555)
+[2023-12-21 13:02:47 INFO  main] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+[2023-12-21 13:02:47 INFO  main] [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Added connection org.mariadb.jdbc.Connection@4d20616a
+[2023-12-21 13:02:47 INFO  main] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+[2023-12-21 13:02:47 INFO  main] [com.green.greengram3.feed.FeedServiceTest] result [FeedSelVo(ifeed=1, contents=일번 feedSelVo, location=null, createdAt=null, writerIuser=null, writerNm=null, writerPic=null, pics=[a.jpg, b.jpg], isFav=0, comments=[FeedCommentSelVo(ifeedComment=0, comment=ddd, createdAt=null, writerIuser=0, writerNm=null, writerPic=null), FeedCommentSelVo(ifeedComment=0, comment=fff, createdAt=null, writerIuser=0, writerNm=null, writerPic=null), FeedCommentSelVo(ifeedComment=0, comment=ggg, createdAt=null, writerIuser=0, writerNm=null, writerPic=null)], isMoreComment=1), FeedSelVo(ifeed=2, contents=이번 feedSelVo, location=null, createdAt=null, writerIuser=null, writerNm=null, writerPic=null, pics=[가.jpg, 나.jpg], isFav=0, comments=[], isMoreComment=0)]
+[2023-12-21 13:02:47 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+[2023-12-21 13:02:47 INFO  SpringApplicationShutdownHook] [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.

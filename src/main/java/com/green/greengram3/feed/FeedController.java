@@ -10,6 +10,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
@@ -23,7 +24,8 @@ public class FeedController {
     @Operation(summary = "피드 등록", description = "피드 등록 처리")
     @PostMapping
     public ResVo postFeed(@RequestBody FeedInsDto dto) {
-        return service.postFeed(dto);
+        ResVo vo = service.postFeed(dto);
+        return vo;
     }
 
     @Operation(summary = "피드 리스트", description = "전체 피드 리스트")
@@ -34,8 +36,8 @@ public class FeedController {
                 .startIdx((page-1) * Const.FEED_COUNT_PER_PAGE)
                 .build();
         return service.getFeedAll(dto); */
-
-        return service.getFeedAll(dto);
+        List<FeedSelVo> list = service.getFeedAll(dto);
+        return list;
     }
 
     @GetMapping("/fav")
@@ -47,6 +49,7 @@ public class FeedController {
     @DeleteMapping
     public ResVo DelFeed(FeedDelDto dto) {
         log.info("dto : {}", dto);
-        return service.DelFeed(dto);
+        ResVo vo = service.DelFeed(dto);
+        return vo;
     }
 }
