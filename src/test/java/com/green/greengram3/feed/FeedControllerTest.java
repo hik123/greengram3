@@ -1,6 +1,7 @@
 package com.green.greengram3.feed;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.green.greengram3.MockMvcConfig;
 import com.green.greengram3.common.ResVo;
 import com.green.greengram3.feed.model.FeedDelDto;
 import com.green.greengram3.feed.model.FeedInsDto;
@@ -27,6 +28,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+
+@MockMvcConfig
 @WebMvcTest(FeedController.class) //spring 컨테이너 올려줌 빈등록된 컨트롤러들을
 class FeedControllerTest {
 
@@ -61,13 +64,13 @@ class FeedControllerTest {
 
         List<FeedSelVo> list = new ArrayList();
         FeedSelVo vo = new FeedSelVo();
-        vo.setContents("aaaaaa");
+        vo.setContents("ㅎㅎㅎㅎㅎ");
         vo.setIfeed(1);
         FeedSelVo vo3 = new FeedSelVo();
-        vo.setContents("aaaaaa3");
+        vo.setContents("안녕하세요2");
         vo.setIfeed(3);
         FeedSelVo vo2 = new FeedSelVo();
-        vo.setContents("aaaaaa2");
+        vo.setContents("안녕하세요3");
         vo.setIfeed(2);
 
         list.add(vo);

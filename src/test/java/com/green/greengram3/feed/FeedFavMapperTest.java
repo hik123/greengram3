@@ -18,7 +18,7 @@ import static org.junit.jupiter.api.Assertions.*;
         @Autowired
         private FeedFavMapper mapper;
 
-
+                                                        //트랙잭션 >> 여러개의 업무를 하나로 보는것
     @Test
     public void insFeedFavTest() {
         FeedFavDto dto = new FeedFavDto();

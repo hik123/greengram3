@@ -1,0 +1,8 @@
+[2023-12-28 09:36:43 INFO  main] [com.green.greengram3.feed.FeedControllerTest] Starting FeedControllerTest using Java 17.0.8.1 with PID 2860 (started by Administrator in D:\2023_second\java\spring\greengram3)
+[2023-12-28 09:36:43 INFO  main] [com.green.greengram3.feed.FeedControllerTest] No active profile set, falling back to 1 default profile: "default"
+[2023-12-28 09:36:44 INFO  main] [org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping] Adding welcome page: class path resource [static/index.html]
+[2023-12-28 09:36:44 INFO  main] [org.springframework.boot.test.mock.web.SpringBootMockServletContext] Initializing Spring TestDispatcherServlet ''
+[2023-12-28 09:36:44 INFO  main] [org.springframework.test.web.servlet.TestDispatcherServlet] Initializing Servlet ''
+[2023-12-28 09:36:44 INFO  main] [org.springframework.test.web.servlet.TestDispatcherServlet] Completed initialization in 1 ms
+[2023-12-28 09:36:44 INFO  main] [com.green.greengram3.feed.FeedControllerTest] Started FeedControllerTest in 1.965 seconds (process running for 2.876)
+[2023-12-28 09:36:44 INFO  main] [com.green.greengram3.feed.FeedController] dto : FeedDelDto(ifeed=0, iuser=0)
