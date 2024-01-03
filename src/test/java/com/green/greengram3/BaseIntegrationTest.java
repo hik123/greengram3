@@ -11,13 +11,16 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.transaction.annotation.Transactional;
 
 @Slf4j
-@Import(CharEncodingConfig.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT) // 종합테스트
+//@Import(CharEncodingConfig.class)
+@MockMvcConfig
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT) // 통합테스트
 @AutoConfigureMockMvc
 @Transactional //트랙젝션 있으면 db에 실제로 ins, del 안됨
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 public class BaseIntegrationTest {
 
-    @Autowired protected MockMvc mvc;
-    @Autowired protected ObjectMapper om; //젝슨 라이브러리
+    @Autowired protected MockMvc mvc; // ex)postman
+    @Autowired protected ObjectMapper om; //젝슨 라이브러리 // 통신 시 데이터 보내고 받을때 사용
+
+
 }

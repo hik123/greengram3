@@ -1,6 +1,7 @@
 package com.green.greengram3.feed;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.green.greengram3.CharEncodingConfig;
 import com.green.greengram3.MockMvcConfig;
 import com.green.greengram3.common.ResVo;
 import com.green.greengram3.feed.model.FeedDelDto;
@@ -10,6 +11,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.context.annotation.Import;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
@@ -29,13 +31,13 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 
-@MockMvcConfig
+@Import(CharEncodingConfig.class)
+//@MockMvcConfig //한글이 깨지지 않기위해 줌
 @WebMvcTest(FeedController.class) //spring 컨테이너 올려줌 빈등록된 컨트롤러들을
 class FeedControllerTest {
 
     @Autowired private MockMvc mvc;
     @Autowired private ObjectMapper mapper;
-
     @MockBean private FeedService service;            //객체형은 null, list는 사이즈0짜리 리턴
 
     @Test

@@ -4,12 +4,16 @@ package com.green.greengram3.feed;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.green.greengram3.BaseIntegrationTest;
 import com.green.greengram3.common.ResVo;
+import com.green.greengram3.feed.model.FeedDelDto;
 import com.green.greengram3.feed.model.FeedInsDto;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.MediaType;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.web.servlet.MvcResult;
+import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,12 +27,12 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 public class FeedIntegrationTest extends BaseIntegrationTest {
 
     @Test
-    //@Rollback(false)
+    @Rollback(false)
     public void postFeed() throws Exception {
         FeedInsDto dto = new FeedInsDto();
-        dto.setIuser(2);
-        dto.setContents("통합 테스트 작업 중");
-        dto.setLocation("그린컴퓨터학원");
+        dto.setIuser(8);
+        dto.setContents("통합 테스트 작업 중8");
+        dto.setLocation("그린컴퓨터학원8");
 
         List<String> pics = new ArrayList<>();
         pics.add("https://ko.skyticket.com/guide/wp-content/uploads/2021/07/shutterstock_667925704-2fff.jpg");
@@ -62,8 +66,27 @@ public class FeedIntegrationTest extends BaseIntegrationTest {
         // json 쓰는이유? 데이터로 만들기위해
         //빈등록 >> 스프링 컨테이너한테 대리로 객체화 부탁함 싱글턴으로
 
+    }
 
+    @Test
+    //@Rollback(false)
+    public void delFeed() throws Exception {
 
+        MultiValueMap<String, String> params = new LinkedMultiValueMap();
+        params.add("ifeed", "2");
+        params.add("iuser", "2");
 
+        MvcResult mr = mvc.perform (
+                        MockMvcRequestBuilders
+                                .delete("/api/feed")
+                                .params(params)
+                )
+                .andExpect(status().isOk())
+                .andDo(print())
+                .andReturn();
+
+        String content = mr.getResponse().getContentAsString();
+        ResVo vo = om.readValue(content, ResVo.class);
+        assertEquals(1, vo.getResult());
     }
 }
